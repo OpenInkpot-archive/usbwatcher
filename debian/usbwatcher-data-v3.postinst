@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+if [ ! -f /etc/default/usbwatcher ]; then
+    ln -s /usr/share/usbwatcher/v3.cfg /etc/default/usbwatcher
+fi
+
+#DEBHELPER#
+
+exit 0

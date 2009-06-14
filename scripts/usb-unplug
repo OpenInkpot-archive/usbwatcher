@@ -1,0 +1,22 @@
+#!/bin/sh
+
+if [ ! -e /var/lib/usbwatcher/state ]; then
+	exit -1;
+fi
+
+. /var/lib/usbwatcher/state
+> /var/lib/usbwatcher/state
+
+if [ x"$STATE" = x"usbnet" ]; then
+	rmmod g_ether
+fi
+
+if [ x"$STATE" = x"mass_storage" ]; then
+	rmmod g_storage
+	
+	mount /mnt/storage
+	
+	MDEV=`grep mmcblk /proc/partitions | awk '{print $4}'` /sbin/automount.sh
+	
+	/etc/init.d/nulldm start
+fi

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+trap "" HUP
+
+/etc/init.d/nulldm stop
+
+if [ -e /etc/default/usbwatcher ]; then
+	esplash -i /etc/default/usbwatcher
+fi
+
+umount /media/sd
+umount /mnt/storage
+
+modprobe g_storage
+echo STATE=mass_storage > /var/lib/usbwatcher/state

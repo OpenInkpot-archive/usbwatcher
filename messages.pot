@@ -1,0 +1,28 @@
+# usbwatcher
+# Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
+# This file is distributed under the same license as the PACKAGE package.
+# Alexander Kerner <lunohod@openinkpot.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: usbwatcher\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-14 17:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/usbwatcher.c:216
+msgid "Usb Mass Storage"
+msgstr ""
+
+#: src/usbwatcher.c:218
+msgid "Charging"
+msgstr ""
+
+#: src/usbwatcher.c:239
+msgid "Usb connection"
+msgstr ""

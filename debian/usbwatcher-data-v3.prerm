@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+if [ -h /etc/default/usbwatcher ]; then
+	rm -f /etc/default/usbwatcher
+fi
+
+#DEBHELPER#
+
+exit 0

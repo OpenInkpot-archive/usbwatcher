@@ -1,0 +1,32 @@
+Source: usbwatcher
+Section: gui
+Maintainer: Alexander Kerner <lunohod@openinkpot.org>
+Build-Depends: debhelper (>> 2.0.0), autoconf, automake, libtool, pkg-config, libecore-dev, libedje-dev, libevas-dev, echoicebox-dev, mk-rawpic, lzma
+XCS-Cross-Host-Build-Depends: debhelper (>> 2.0.0), autoconf, automake, libtool, pkg-config, mk-rawpic, lzma
+XCS-Cross-Build-Depends: libecore-dev, libevas-dev, libedje-dev, echoicebox-dev
+Priority: optional
+Standards-Version: 3.6.2
+
+Package: usbwatcher
+Architecture: any
+Depends: ${shlibs:Depends}, uk-send
+Description: USB monitoring tool
+ Usbwatcher is monitoring USB and allows user to choose mass storage mode when USB cable is plugged in.
+
+Package: usbwatcher-data-v3
+Architecture: all
+Depends: usbwatcher
+Description: OpenInkpot usb  splash for V3
+ This package provides OpenInkpot usb splash picture and config for Hanlin V3.
+
+Package: usbwatcher-data-n516
+Architecture: all
+Depends: usbwatcher
+Description: OpenInkpot usb splash for N516
+ This package provides OpenInkpot usb splash picture and config for Hanvon N516.
+
+Package: usbwatcher-data-azbooka-n516
+Architecture: all
+Depends: usbwatcher
+Description: Azbooka usb splash for N516
+ This package provides Azbooka usb splash picture and config for Hanvon N516.

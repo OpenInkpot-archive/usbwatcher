@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ x"$ACTION" = x"change" -a x"$POWER_SUPPLY_TYPE" = x"USB" ]
+then
+	if [ $POWER_SUPPLY_ONLINE -eq 1 ]
+	then
+		uk-send usbwatcher "USB-plugged"
+		[ $? == 1 ] || usb-usbnet
+	else
+		uk-send usbwatcher "USB-unplugged"
+		usb-unplug
+	fi
+fi

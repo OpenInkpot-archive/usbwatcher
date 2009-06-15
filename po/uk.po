@@ -1,0 +1,28 @@
+# usbwatcher
+# Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
+# This file is distributed under the same license as the PACKAGE package.
+# Alexander Kerner <lunohod@openinkpot.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: usbwatcher\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-14 17:44+0200\n"
+"PO-Revision-Date: 2009-06-15 17:44+0200\n"
+"Last-Translator: Vladimir <v@v>\n"
+"Language-Team: ukranian <openinkpot-l10n@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/usbwatcher.c:216
+msgid "Usb Mass Storage"
+msgstr "Передача даних та підзарядка"
+
+#: src/usbwatcher.c:218
+msgid "Charging"
+msgstr "Тільки підзарядка"
+
+#: src/usbwatcher.c:239
+msgid "Usb connection"
+msgstr "Виявлено USB підключення. Зробить вибір."

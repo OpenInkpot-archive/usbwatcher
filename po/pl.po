@@ -1,0 +1,30 @@
+# usbwatcher
+# Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
+# This file is distributed under the same license as the PACKAGE package.
+# Alexander Kerner <lunohod@openinkpot.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: usbwatcher\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-14 17:44+0200\n"
+"PO-Revision-Date: 2009-06-25 15:46+0200\n"
+"Last-Translator: Tomasz Długosz <tomek3d@gmail.com>\n"
+"Language-Team: Polish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: src/usbwatcher.c:216
+msgid "Usb Mass Storage"
+msgstr "Transfer danych i ładowanie"
+
+#: src/usbwatcher.c:218
+msgid "Charging"
+msgstr "Ładowanie"
+
+#: src/usbwatcher.c:239
+msgid "Usb connection"
+msgstr "Połączenie USB. Wybierz tryb."

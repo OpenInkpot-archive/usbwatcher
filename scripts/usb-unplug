@@ -16,7 +16,10 @@ if [ x"$STATE" = x"mass_storage" ]; then
 	
 	mount /mnt/storage
 	
-	MDEV=`grep mmcblk /proc/partitions | awk '{print $4}'` /sbin/automount.sh
+	for i in `grep mmcblk /proc/partitions | awk '{print $4}'`
+	do
+		ACTION=add MDEV=$i /sbin/automount.sh
+	done
 	
 	/etc/init.d/nulldm start
 fi

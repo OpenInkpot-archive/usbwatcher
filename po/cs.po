@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Alexander Kerner <lunohod@openinkpot.org>
 #
+msgid ""
+msgstr ""
+
 "Project-Id-Version: usbwatcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-14 17:44+0200\n"

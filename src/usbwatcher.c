@@ -32,8 +32,6 @@
 #include <Evas.h>
 #include <Edje.h>
 
-#include <echoicebox.h>
-
 #ifndef DATADIR
 #define DATADIR "."
 #endif

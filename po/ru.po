@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: usbwatcher\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-14 17:44+0200\n"
+"Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
+"POT-Creation-Date: 2009-07-13 21:27+0200\n"
 "PO-Revision-Date: 2009-06-15 17:44+0200\n"
 "Last-Translator: Vladimir <v@v>\n"
 "Language-Team: russian <openinkpot-l10n@googlegroups.com>\n"
@@ -15,14 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/usbwatcher.c:216
-msgid "Usb Mass Storage"
-msgstr "Зарядка + передача данных"
+#: src/usbwatcher.c:201
+msgid "USB Connection"
+msgstr "USB-соединение"
 
-#: src/usbwatcher.c:218
-msgid "Charging"
-msgstr "Только зарядка батареи"
+#: src/usbwatcher.c:204
+msgid "Usb Mass Storage - press \"1\""
+msgstr "Заряд батареи и передача данных - нажмите кнопку \"1\""
 
-#: src/usbwatcher.c:239
-msgid "Usb connection"
-msgstr "Обнаружено USB-подключение. Выберите режим."
+#: src/usbwatcher.c:205
+msgid "Battery Charging - press \"2\""
+msgstr "Только заряд батареи - нажмите кнопку \"2\""

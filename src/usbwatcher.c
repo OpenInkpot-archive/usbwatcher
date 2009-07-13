@@ -193,7 +193,7 @@ int main(int argc, char **argv)
 	evas_object_resize(main_edje, 600, 800);
 	evas_object_show(main_edje);
 
-	evas_object_focus_set(main_edje, true);
+	evas_object_focus_set(main_edje, 1);
 	evas_object_event_callback_add(main_edje, EVAS_CALLBACK_KEY_UP, &key_handler, NULL);
 
 	ecore_evas_callback_resize_set(main_win, main_win_resize_handler);

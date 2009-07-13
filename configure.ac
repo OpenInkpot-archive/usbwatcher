@@ -12,6 +12,4 @@ PKG_CHECK_MODULES(ECORE_EVAS, [ecore-evas])
 PKG_CHECK_MODULES(EVAS, [evas])
 PKG_CHECK_MODULES(EDJE, [edje])
 
-PKG_CHECK_MODULES(ECHOICEBOX, [echoicebox])
-
 AC_OUTPUT([Makefile src/Makefile scripts/Makefile themes/Makefile po/Makefile])

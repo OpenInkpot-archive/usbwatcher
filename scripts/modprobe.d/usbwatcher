@@ -1,0 +1,1 @@
+options g_file_storage file=/dev/mtdblock_storage stall=0

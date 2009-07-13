@@ -63,8 +63,8 @@ collections {
 				description {
 					state, "default" 0.0;
 					color, 255 255 255 0;
-					rel1 { relative, 0.0 0.0; offset, 200 150; to, "usbwatcher/image"; }
-					rel2 { relative, 0.0 0.0; offset, 580 300; to, "usbwatcher/image"; }
+					rel1 { relative, 0.0 0.0; offset, 200 130; to, "usbwatcher/image"; }
+					rel2 { relative, 0.0 0.0; offset, 580 320; to, "usbwatcher/image"; }
 				}
 			}
 			part {

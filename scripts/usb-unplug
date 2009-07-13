@@ -12,7 +12,7 @@ if [ x"$STATE" = x"usbnet" ]; then
 fi
 
 if [ x"$STATE" = x"mass_storage" ]; then
-	rmmod g_storage
+	rmmod g_file_storage
 	
 	mount /mnt/storage
 	

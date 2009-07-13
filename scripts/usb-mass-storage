@@ -11,5 +11,5 @@ fi
 umount /media/sd
 umount /mnt/storage
 
-modprobe g_storage
+modprobe g_file_storage
 echo STATE=mass_storage > /var/lib/usbwatcher/state

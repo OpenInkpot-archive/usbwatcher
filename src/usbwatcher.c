@@ -64,9 +64,9 @@ key_handler(void *data, Evas *evas, Evas_Object *obj, void *event_info)
 {
 	Evas_Event_Key_Up* ev = (Evas_Event_Key_Up*)event_info;
 
-	if(!strcmp(ev->keyname, "1"))
+	if(!strcmp(ev->keyname, "KP_1"))
 		load_massstorage();
-	else if(!strcmp(ev->keyname, "Escape") || !strcmp(ev->keyname, "2"))
+	else if(!strcmp(ev->keyname, "Escape") || !strcmp(ev->keyname, "KP_2"))
 		do_nothing();
 	else if(!strcmp(ev->keyname, "XF86Search") || !strcmp(ev->keyname, "x"))
 		load_usbnet();

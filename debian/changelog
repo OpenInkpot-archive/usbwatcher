@@ -1,3 +1,10 @@
+usbwatcher (0.2-5) asimov; urgency=low
+
+  * unload competitive modules
+  * get rid of modprobe.d mess
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Tue, 14 Jul 2009 18:50:48 +0200
+
 usbwatcher (0.2-4) asimov; urgency=low
 
   * export sd card

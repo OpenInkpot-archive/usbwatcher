@@ -8,6 +8,18 @@ if [ -e /etc/default/usbwatcher ]; then
 	esplash -i /etc/default/usbwatcher
 fi
 
+
+STORAGE=/dev/mtdblock_storage
+SD=`mount |  awk '/media\/sd/{print $1}'`
+if [ x${SD} != x"" ];
+then
+	FILE=${STORAGE},${SD}
+else
+	FILE=${STORAGE}
+fi
+
+echo "options g_file_storage file=${FILE} stall=0" > /etc/modprobe.d/usbwatcher
+
 umount /media/sd
 umount /mnt/storage
 

@@ -18,7 +18,7 @@ else
 	FILE=${STORAGE}
 fi
 
-echo "options g_file_storage file=${FILE} stall=0" > /etc/modprobe.d/usbwatcher
+echo "options g_file_storage file=${FILE} stall=0 removable=1" > /etc/modprobe.d/usbwatcher
 
 umount /media/sd
 umount /mnt/storage

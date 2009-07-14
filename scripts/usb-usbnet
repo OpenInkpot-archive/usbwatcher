@@ -1,4 +1,6 @@
 #!/bin/sh
 
 modprobe g_ether
+ifdown usb0
+ifup usb0
 echo STATE=usbnet > /var/lib/usbwatcher/state

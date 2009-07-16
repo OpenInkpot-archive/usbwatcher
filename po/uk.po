@@ -16,18 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/usbwatcher.c:201
-#, fuzzy
 msgid "USB Connection"
-msgstr "Виявлено USB підключення. Зробить вибір."
+msgstr "Виявлено USB підключення"
 
 #: src/usbwatcher.c:204
-#, fuzzy
 msgid "Usb Mass Storage - press \"1\""
-msgstr "Передача даних та підзарядка"
+msgstr "Передача даних та підзарядка: натисніть \"1\""
 
 #: src/usbwatcher.c:205
 msgid "Battery Charging - press \"2\""
-msgstr ""
-
-#~ msgid "Charging"
-#~ msgstr "Тільки підзарядка"
+msgstr "Тільки підзарядка: натисніть \"2\""

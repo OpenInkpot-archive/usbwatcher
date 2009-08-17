@@ -1,3 +1,9 @@
+usbwatcher (0.2-7) asimov; urgency=low
+
+  * fixed fallback to usbnet on uk-send error
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Tue, 18 Aug 2009 01:16:36 +0200
+
 usbwatcher (0.2-6) asimov; urgency=low
 
   * upated uk translation

@@ -5,7 +5,7 @@ then
 	if [ $POWER_SUPPLY_ONLINE -eq 1 ]
 	then
 		uk-send usbwatcher "USB-plugged"
-		[ $? == 1 ] || usb-usbnet
+		[ $? == 0 ] || usb-usbnet
 	else
 		uk-send usbwatcher "USB-unplugged"
 		usb-unplug

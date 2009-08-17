@@ -1,3 +1,9 @@
+usbwatcher (0.2-6+b1) asimov; urgency=low
+
+  * Rebuild due to EFL update
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Tue, 18 Aug 2009 04:54:08 +0700
+
 usbwatcher (0.2-6) asimov; urgency=low
 
   * upated uk translation

@@ -2,7 +2,7 @@
 # Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
 # This file is distributed under the same license as the PACKAGE package.
 # Alexander Kerner <lunohod@openinkpot.org>
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: usbwatcher\n"
@@ -15,19 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: src/usbwatcher.c:205
+msgid "Battery Charging - press \"2\""
+msgstr "按2充电"
+
 #: src/usbwatcher.c:201
-#, fuzzy
 msgid "USB Connection"
 msgstr "已连接USB"
 
 #: src/usbwatcher.c:204
-#, fuzzy
 msgid "Usb Mass Storage - press \"1\""
-msgstr "USB大容量存储"
-
-#: src/usbwatcher.c:205
-msgid "Battery Charging - press \"2\""
-msgstr ""
+msgstr "按1连接U盘"
 
 #~ msgid "Charging"
 #~ msgstr "正在充电"

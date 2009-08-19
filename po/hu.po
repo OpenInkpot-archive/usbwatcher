@@ -16,17 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: src/usbwatcher.c:204
+msgid "Usb Mass Storage - press \"1\""
+msgstr "Usb háttértár - \"1\"-es gomb"
+
 #: src/usbwatcher.c:205
 msgid "Battery Charging - press \"2\""
-msgstr "Akku töltés - 2-es gomb"
+msgstr "Akku töltés - \"2\"-es gomb"
 
 #: src/usbwatcher.c:201
 msgid "USB Connection"
 msgstr "USB Kapcsolat"
-
-#: src/usbwatcher.c:204
-msgid "Usb Mass Storage - press \"1\""
-msgstr "Usb háttértár - 1-es gomb"
 
 #~ msgid "Charging"
 #~ msgstr "Töltés"

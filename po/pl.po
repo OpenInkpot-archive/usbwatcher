@@ -2,7 +2,7 @@
 # Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
 # This file is distributed under the same license as the PACKAGE package.
 # Alexander Kerner <lunohod@openinkpot.org>
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: usbwatcher\n"
@@ -14,22 +14,19 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
-
-#: src/usbwatcher.c:201
-#, fuzzy
-msgid "USB Connection"
-msgstr "Połączenie USB. Wybierz tryb."
-
-#: src/usbwatcher.c:204
-#, fuzzy
-msgid "Usb Mass Storage - press \"1\""
-msgstr "Transfer danych i ładowanie"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: src/usbwatcher.c:205
 msgid "Battery Charging - press \"2\""
-msgstr ""
+msgstr "Ładowanie baterii - wciśnij \"2\""
+
+#: src/usbwatcher.c:201
+msgid "USB Connection"
+msgstr "Połączenie USB"
+
+#: src/usbwatcher.c:204
+msgid "Usb Mass Storage - press \"1\""
+msgstr "Transfer danych - wciśnij \"1\""
 
 #~ msgid "Charging"
 #~ msgstr "Ładowanie"

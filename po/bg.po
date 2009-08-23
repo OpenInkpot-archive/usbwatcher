@@ -2,7 +2,7 @@
 # Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
 # This file is distributed under the same license as the PACKAGE package.
 # Alexander Kerner <lunohod@openinkpot.org>
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: usbwatcher\n"
@@ -15,19 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/usbwatcher.c:201
-#, fuzzy
-msgid "USB Connection"
-msgstr "Изберете режим на връзката"
-
-#: src/usbwatcher.c:204
-#, fuzzy
-msgid "Usb Mass Storage - press \"1\""
-msgstr "Зареждане и трансфер на данни"
-
 #: src/usbwatcher.c:205
 msgid "Battery Charging - press \"2\""
-msgstr ""
+msgstr "Зареждане на батерията - натиснете \\„2\\‟"
+
+#: src/usbwatcher.c:201
+msgid "USB Connection"
+msgstr "USB връзка"
+
+#: src/usbwatcher.c:204
+msgid "Usb Mass Storage - press \"1\""
+msgstr "Прехвърляне на данни - натиснете \\„1\\‟"
 
 #~ msgid "Charging"
 #~ msgstr "Зареждане"

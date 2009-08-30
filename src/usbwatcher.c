@@ -103,8 +103,6 @@ static int _client_del(void* param, int ev_type, void* ev)
 	else if(strlen(USB_UNPLUGGGED) == msg->size && !strncmp(USB_UNPLUGGGED, msg->msg, msg->size))
 		usb_unplugged();
 
-	//printf(": %.*s(%d)\n", msg->size, msg->msg, msg->size);
-
 	free(msg->msg);
 	free(msg);
 	return 0;
@@ -211,8 +209,7 @@ int main(int argc, char **argv)
 			gettext("Battery Charging - press \"2\""));
 	edje_object_part_text_set(main_edje, "usbwatcher/text", t);
 	free(t);
-	
-//	ecore_evas_show(main_win);
+
 	ecore_main_loop_begin();
 
 	ecore_evas_free(main_win);

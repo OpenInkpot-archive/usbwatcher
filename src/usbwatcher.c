@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
+ * Copyright © 2009 Mikhail Gusarov <dottedmag@dottedmag.net>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,6 +33,8 @@
 #include <Evas.h>
 #include <Edje.h>
 
+#include <libkeys.h>
+
 #ifndef DATADIR
 #define DATADIR "."
 #endif
@@ -62,14 +65,15 @@ static void die(const char* fmt, ...)
 static void
 key_handler(void *data, Evas *evas, Evas_Object *obj, void *event_info)
 {
-	Evas_Event_Key_Up* ev = (Evas_Event_Key_Up*)event_info;
+    const char* action = keys_lookup_by_event((keys_t*)data, "default",
+                                              (Evas_Event_Key_Up*)event_info);
 
-	if(!strcmp(ev->keyname, "KP_1"))
-		load_massstorage();
-	else if(!strcmp(ev->keyname, "Escape") || !strcmp(ev->keyname, "KP_2"))
-		do_nothing();
-	else if(!strcmp(ev->keyname, "XF86Search") || !strcmp(ev->keyname, "x"))
-		load_usbnet();
+    if(action && !strcmp(action, "Close"))
+        do_nothing();
+    else if(action && !strcmp(action, "MassStorage"))
+        load_massstorage();
+    else if(action && !strcmp(action, "Usbnet"))
+        load_usbnet();
 }
 
 typedef struct
@@ -172,6 +176,8 @@ int main(int argc, char **argv)
 	setlocale(LC_ALL, "");
 	textdomain("usbwatcher");
 
+    keys_t* keys = keys_alloc("usbwatcher");
+
 	ecore_x_io_error_handler_set(x_shutdown, NULL);
 
 	ecore_con_server_add(ECORE_CON_LOCAL_USER, "usbwatcher", 0, NULL);
@@ -194,7 +200,7 @@ int main(int argc, char **argv)
 	evas_object_show(main_edje);
 
 	evas_object_focus_set(main_edje, 1);
-	evas_object_event_callback_add(main_edje, EVAS_CALLBACK_KEY_UP, &key_handler, NULL);
+	evas_object_event_callback_add(main_edje, EVAS_CALLBACK_KEY_UP, &key_handler, keys);
 
 	ecore_evas_callback_resize_set(main_win, main_win_resize_handler);
 
@@ -216,6 +222,8 @@ int main(int argc, char **argv)
 	ecore_con_shutdown();
 	ecore_shutdown();
 	evas_shutdown();
+
+    keys_free(keys);
 
 	return 0;
 }

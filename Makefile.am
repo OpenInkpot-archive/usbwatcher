@@ -1,1 +1,1 @@
-SUBDIRS = src scripts themes po
+SUBDIRS = src scripts themes po data

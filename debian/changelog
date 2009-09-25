@@ -1,3 +1,10 @@
+usbwatcher (0.3-2) asimov; urgency=low
+
+  * Move usbwatcher script to /lib/mdev/handlers.d
+  * Updated translations: German, Bengali, Ukrainian
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Fri, 25 Sep 2009 14:39:55 +0200
+
 usbwatcher (0.3-1) asimov; urgency=low
 
   * Use libkeys for adjustable keybindings.

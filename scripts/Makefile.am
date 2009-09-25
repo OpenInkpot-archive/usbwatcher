@@ -7,7 +7,7 @@ usb-unplug \
 usb-usbnet \
 usbwatcher
 
-mdevdir = /lib/mdev
+mdevdir = /lib/mdev/handlers.d
 mdev_DATA = usbwatcher
 
 xsessiondir = /etc/X11/Xsession.d

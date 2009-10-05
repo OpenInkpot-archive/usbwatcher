@@ -18,7 +18,7 @@ if [ x"$STATE" = x"mass_storage" ]; then
 	
 	for i in `grep mmcblk /proc/partitions | awk '{print $4}'`
 	do
-		ACTION=add MDEV=$i /sbin/automount.sh
+		ACTION=add MDEV=$i /lib/mdev/automount
 	done
 	
 	/etc/init.d/nulldm start

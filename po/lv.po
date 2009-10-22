@@ -1,0 +1,29 @@
+# usbwatcher
+# Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
+# This file is distributed under the same license as the PACKAGE package.
+# Alexander Kerner <lunohod@openinkpot.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: usbwatcher\n"
+"Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
+"POT-Creation-Date: 2009-07-13 21:27+0200\n"
+"PO-Revision-Date: 2009-10-22 17:17+0200\n"
+"Last-Translator: Dainis <druumais@inbox.lv>\n"
+"Language-Team: russian <openinkpot-l10n@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/usbwatcher.c:201
+msgid "USB Connection"
+msgstr "USB-savienojums"
+
+#: src/usbwatcher.c:204
+msgid "Usb Mass Storage - press \"1\""
+msgstr "DATU APMAIŅA un baterijas uzlādēšana - spied pogu \"1\""
+
+#: src/usbwatcher.c:205
+msgid "Battery Charging - press \"2\""
+msgstr "BATERIJAS UZLĀDĒŠANA - spied pogu \"2\""
+

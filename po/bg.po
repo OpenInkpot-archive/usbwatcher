@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/usbwatcher.c:205
-msgid "Battery Charging - press \"2\""
-msgstr "Зареждане на батерията - натиснете \\„2\\‟"
-
 #: src/usbwatcher.c:201
 msgid "USB Connection"
 msgstr "USB връзка"
 
 #: src/usbwatcher.c:204
 msgid "Usb Mass Storage - press \"1\""
-msgstr "Прехвърляне на данни - натиснете \\„1\\‟"
+msgstr "Прехвърляне на данни - натиснете „1“"
+
+#: src/usbwatcher.c:205
+msgid "Battery Charging - press \"2\""
+msgstr "Зареждане на батерията - натиснете „2“"
 
 #~ msgid "Charging"
 #~ msgstr "Зареждане"

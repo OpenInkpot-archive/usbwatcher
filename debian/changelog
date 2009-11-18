@@ -1,3 +1,9 @@
+usbwatcher (0.3-6) asimov; urgency=low
+
+  * Adjust dialog background _again_ (OI#531)
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Wed, 18 Nov 2009 06:48:34 +0600
+
 usbwatcher (0.3-5) asimov; urgency=low
 
   * Adjust dialog background to match color scheme (OI#531)

@@ -1,3 +1,9 @@
+usbwatcher (0.3-7) asimov; urgency=low
+
+  * Cleanup packaging.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Sun, 22 Nov 2009 00:14:39 +0600
+
 usbwatcher (0.3-6) asimov; urgency=low
 
   * Adjust dialog background _again_ (OI#531)

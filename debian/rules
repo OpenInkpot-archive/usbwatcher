@@ -36,7 +36,7 @@ clean:
 install: build
 	dh_testdir
 	dh_testroot
-	dh_clean -k
+	dh_prep
 	dh_installdirs
 
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/usbwatcher
@@ -51,7 +51,6 @@ install: build
 	lzma $(CURDIR)/data/usb-mount
 	mk-rawpic -r270 -d3 $(CURDIR)/data/usb-mount.png $(CURDIR)/data/usb-mount-270
 	lzma $(CURDIR)/data/usb-mount-270
-	
 	install -m 0644 $(CURDIR)/data/usb-mount.lzma $(CURDIR)/debian/usbwatcher-data-v3$(DATADIR)/oi-usb-mount.lzma
 	install -m 0644 $(CURDIR)/data/usb-mount-270.lzma $(CURDIR)/debian/usbwatcher-data-n516$(DATADIR)/oi-usb-mount-270.lzma
 	install -m 0644 $(CURDIR)/data/usb-mount-270.lzma $(CURDIR)/debian/usbwatcher-data-azbooka-n516$(DATADIR)/azbooka-usb-mount-270.lzma
@@ -62,12 +61,10 @@ binary-arch: build install
 	dh_testroot
 	dh_compress
 	dh_fixperms
-	dh_makeshlibs
 	dh_strip
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
-	dh_md5sums
 	dh_builddeb
 
 binary-indep: build install

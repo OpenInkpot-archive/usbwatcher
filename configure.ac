@@ -1,5 +1,5 @@
 AC_PREREQ(2.57)
-AC_INIT(usbwatcher, 0.1, lunohod@openinkpot.org)
+AC_INIT(usbwatcher, 0.3, lunohod@openinkpot.org)
 AM_INIT_AUTOMAKE(foreign)
 
 AC_PROG_CC

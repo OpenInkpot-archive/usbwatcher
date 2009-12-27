@@ -205,7 +205,7 @@ int main(int argc, char **argv)
 	edje_object_part_text_set(main_edje, "usbwatcher/title", gettext("USB Connection"));
 	char *t;
 	asprintf(&t, "%s<br><br>%s",
-			gettext("Usb Mass Storage - press \"1\""),
+			gettext("USB Mass Storage - press \"1\""),
 			gettext("Battery Charging - press \"2\""));
 	edje_object_part_text_set(main_edje, "usbwatcher/text", t);
 	free(t);

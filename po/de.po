@@ -1,12 +1,12 @@
 # usbwatcher
 # This file is put in the public domain.
 # Alexander Kerner <lunohod@openinkpot.org>, 2009.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: usbwatcher 0.1\n"
 "Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
-"POT-Creation-Date: 2009-07-13 21:27+0200\n"
+"POT-Creation-Date: 2009-12-27 18:20+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,14 +14,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/usbwatcher.c:201
+#: src/usbwatcher.c:205
 msgid "USB Connection"
 msgstr "USB-Verbindung"
 
-#: src/usbwatcher.c:205
+#: src/usbwatcher.c:208
+#, fuzzy
+msgid "USB Mass Storage - press \"1\""
+msgstr "\"1\" - USB-Massenspeicher"
+
+#: src/usbwatcher.c:209
 msgid "Battery Charging - press \"2\""
 msgstr "\"2\" - Batterie aufladen"
-
-#: src/usbwatcher.c:204
-msgid "Usb Mass Storage - press \"1\""
-msgstr "\"1\" - USB-Massenspeicher"

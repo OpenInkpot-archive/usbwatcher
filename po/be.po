@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: usbwatcher\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-14 17:44+0200\n"
+"Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
+"POT-Creation-Date: 2009-12-27 18:20+0600\n"
 "PO-Revision-Date: 2009-07-13 22:20+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -18,15 +18,19 @@ msgstr ""
 "X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/usbwatcher.c:216
-msgid "Usb Mass Storage"
-msgstr "Зарадка + перадача дадзеных"
-
-#: src/usbwatcher.c:218
-msgid "Charging"
-msgstr "Зарадка"
-
-#: src/usbwatcher.c:239
-msgid "Usb connection"
+#: src/usbwatcher.c:205
+#, fuzzy
+msgid "USB Connection"
 msgstr "Знойдзена USB-злучэнне. Выберыце рэжым."
 
+#: src/usbwatcher.c:208
+#, fuzzy
+msgid "USB Mass Storage - press \"1\""
+msgstr "Зарадка + перадача дадзеных"
+
+#: src/usbwatcher.c:209
+msgid "Battery Charging - press \"2\""
+msgstr ""
+
+#~ msgid "Charging"
+#~ msgstr "Зарадка"

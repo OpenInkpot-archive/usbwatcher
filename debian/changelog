@@ -1,3 +1,10 @@
+usbwatcher (0.3.8) zelazny; urgency=low
+
+  * Rebuild due to EFL update.
+  * New translation: Japanese.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Thu, 14 Jan 2010 14:12:19 +0600
+
 usbwatcher (0.3-7) asimov; urgency=low
 
   * Cleanup packaging.

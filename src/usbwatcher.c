@@ -35,6 +35,8 @@
 
 #include <libkeys.h>
 
+#include <libeoi_themes.h>
+
 #ifndef DATADIR
 #define DATADIR "."
 #endif
@@ -190,9 +192,10 @@ int main(int argc, char **argv)
 	ecore_evas_title_set(main_win, "Usbwatcher");
 	Evas *main_canvas = ecore_evas_get(main_win);
 
-	Evas_Object *main_edje = edje_object_add(main_canvas);
+    Evas_Object *main_edje
+        = eoi_create_themed_edje(main_canvas, "usbwatcher", "usbwatcher");
+;
 	evas_object_name_set(main_edje, "edje");
-	edje_object_file_set(main_edje, DATADIR "/usbwatcher/usbwatcher.edj", "usbwatcher");
 	evas_object_move(main_edje, 0, 0);
 	evas_object_resize(main_edje, 600, 800);
 	evas_object_show(main_edje);

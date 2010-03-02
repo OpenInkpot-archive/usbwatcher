@@ -64,6 +64,34 @@ static void die(const char* fmt, ...)
 	exit(EXIT_FAILURE);
 }
 
+void usb_pluggged()
+{
+	ecore_evas_hide(main_win);
+	ecore_evas_show(main_win);
+}
+
+void usb_unplugged()
+{
+	ecore_evas_hide(main_win);
+}
+
+void load_massstorage()
+{
+	ecore_evas_hide(main_win);
+	system("usb-mass-storage");
+}
+
+void load_usbnet()
+{
+	ecore_evas_hide(main_win);
+	system("usb-usbnet");
+}
+
+void do_nothing()
+{
+	ecore_evas_hide(main_win);
+}
+
 static void
 key_handler(void *data, Evas *evas, Evas_Object *obj, void *event_info)
 {
@@ -118,34 +146,6 @@ static int _client_data(void* param, int ev_type, void* ev)
 	memcpy(msg->msg + msg->size, e->data, e->size);
 	msg->size += e->size;
 	return 0;
-}
-
-void usb_pluggged()
-{
-	ecore_evas_hide(main_win);
-	ecore_evas_show(main_win);
-}
-
-void usb_unplugged()
-{
-	ecore_evas_hide(main_win);
-}
-
-void load_massstorage()
-{
-	ecore_evas_hide(main_win);
-	system("usb-mass-storage");
-}
-
-void load_usbnet()
-{
-	ecore_evas_hide(main_win);
-	system("usb-usbnet");
-}
-
-void do_nothing()
-{
-	ecore_evas_hide(main_win);
 }
 
 static void main_win_resize_handler(Ecore_Evas* main_win)

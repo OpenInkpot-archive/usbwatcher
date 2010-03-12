@@ -1,8 +1,8 @@
 Source: usbwatcher
 Section: gui
 Maintainer: Alexander Kerner <lunohod@openinkpot.org>
-Build-Depends: debhelper (>= 7), autoconf, automake, libtool, pkg-config, libecore-dev, libedje-dev, libevas-dev, mk-rawpic, lzma, libkeys-dev, libeoi-dev
-XCS-Cross-Host-Build-Depends: debhelper (>= 7), autoconf, automake, libtool, pkg-config, mk-rawpic, lzma
+Build-Depends: debhelper (>= 7), autoconf, automake, libtool, pkg-config, libecore-dev, libedje-dev, libevas-dev, mk-rawpic, lzma, libkeys-dev, libeoi-dev, libedje-bin
+XCS-Cross-Host-Build-Depends: debhelper (>= 7), autoconf, automake, libtool, pkg-config, mk-rawpic, lzma, libedje-bin
 XCS-Cross-Build-Depends: libecore-dev, libevas-dev, libedje-dev, libkeys-dev, libeoi-dev
 Priority: optional
 Standards-Version: 3.8.3

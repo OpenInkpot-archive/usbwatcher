@@ -22,4 +22,6 @@ stamp-h1
 .libs
 *.lo
 *.la
-
+po/*.mo
+src/usbwatcher
+*.edj

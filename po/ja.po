@@ -20,7 +20,7 @@ msgid "USB Connection"
 msgstr "USB接続"
 
 #: src/usbwatcher.c:204
-msgid "Usb Mass Storage - press \"1\""
+msgid "USB Mass Storage - press \"1\""
 msgstr "\"1\" - USBマスストレージ"
 
 #: src/usbwatcher.c:205

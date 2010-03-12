@@ -23,7 +23,7 @@ msgstr "USB Kapcsolat"
 #: src/usbwatcher.c:208
 #, fuzzy
 msgid "USB Mass Storage - press \"1\""
-msgstr "Usb háttértár - \"1\"-es gomb"
+msgstr "USB háttértár - \"1\"-es gomb"
 
 #: src/usbwatcher.c:209
 msgid "Battery Charging - press \"2\""

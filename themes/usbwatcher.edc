@@ -78,7 +78,6 @@ collections {
 					text {
 						style, "textblock_style";
 						max, 0 1;
-						text, "Usb Mass Storage - press \"1\"<br><br>Battery Charging - press \"2\"";
 					}
 					align, 0.0 0.3;
 					rel1 { relative, 0.0 0.0; offset, 0 0; to, "usbwatcher/text_rect"; }

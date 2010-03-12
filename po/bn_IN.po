@@ -24,7 +24,7 @@ msgstr "USB সংযোগ"
 #: src/usbwatcher.c:208
 #, fuzzy
 msgid "USB Mass Storage - press \"1\""
-msgstr "Usb মাস স্টোরেজ - press \"1\""
+msgstr "USB মাস স্টোরেজ - press \"1\""
 
 #: src/usbwatcher.c:209
 msgid "Battery Charging - press \"2\""

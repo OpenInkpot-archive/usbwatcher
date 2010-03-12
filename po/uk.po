@@ -24,6 +24,6 @@ msgid "Battery Charging - press \"2\""
 msgstr "Тільки підзарядка - натисніть \"2\""
 
 #: src/usbwatcher.c:204
-msgid "Usb Mass Storage - press \"1\""
+msgid "USB Mass Storage - press \"1\""
 msgstr "Передача даних та підзарядка - натисніть \"1\""
 

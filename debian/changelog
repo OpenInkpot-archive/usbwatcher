@@ -1,3 +1,10 @@
+usbwatcher (0.3.10) zelazny; urgency=low
+
+  * Theming changed to use new style.
+  * Several translations updated, being broken after s/Usb/USB/
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Sat, 13 Mar 2010 04:15:58 +0600
+
 usbwatcher (0.3.9) zelazny; urgency=low
 
   * Translation updated: Ukrainian.

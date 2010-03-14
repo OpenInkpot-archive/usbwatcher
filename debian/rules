@@ -49,11 +49,9 @@ install: build
 
 	mk-rawpic -d3 $(CURDIR)/data/usb-mount.png $(CURDIR)/data/usb-mount
 	lzma $(CURDIR)/data/usb-mount
-	mk-rawpic -r270 -d3 $(CURDIR)/data/usb-mount.png $(CURDIR)/data/usb-mount-270
-	lzma $(CURDIR)/data/usb-mount-270
 	install -m 0644 $(CURDIR)/data/usb-mount.lzma $(CURDIR)/debian/usbwatcher-data-v3$(DATADIR)/oi-usb-mount.lzma
-	install -m 0644 $(CURDIR)/data/usb-mount-270.lzma $(CURDIR)/debian/usbwatcher-data-n516$(DATADIR)/oi-usb-mount-270.lzma
-	install -m 0644 $(CURDIR)/data/usb-mount-270.lzma $(CURDIR)/debian/usbwatcher-data-azbooka-n516$(DATADIR)/azbooka-usb-mount-270.lzma
+	install -m 0644 $(CURDIR)/data/usb-mount.lzma $(CURDIR)/debian/usbwatcher-data-n516$(DATADIR)/oi-usb-mount.lzma
+	install -m 0644 $(CURDIR)/data/usb-mount.lzma $(CURDIR)/debian/usbwatcher-data-azbooka-n516$(DATADIR)/azbooka-usb-mount.lzma
 
 
 binary-arch: build install

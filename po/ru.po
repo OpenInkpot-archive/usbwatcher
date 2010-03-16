@@ -2,12 +2,12 @@
 # Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
 # This file is distributed under the same license as the PACKAGE package.
 # Alexander Kerner <lunohod@openinkpot.org>
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: usbwatcher\n"
 "Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
-"POT-Creation-Date: 2009-12-27 18:20+0600\n"
+"POT-Creation-Date: 2009-07-13 21:27+0200\n"
 "PO-Revision-Date: 2009-06-15 17:44+0200\n"
 "Last-Translator: Vladimir <v@v>\n"
 "Language-Team: russian <openinkpot-l10n@googlegroups.com>\n"
@@ -16,14 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/usbwatcher.c:205
+msgid "Battery Charging - press \"2\""
+msgstr "Только заряд батареи - нажмите кнопку «2»"
+
+#: src/usbwatcher.c:201
 msgid "USB Connection"
 msgstr "USB-соединение"
 
-#: src/usbwatcher.c:208
-#, fuzzy
-msgid "USB Mass Storage - press \"1\""
-msgstr "Заряд батареи и передача данных - нажмите кнопку \"1\""
-
-#: src/usbwatcher.c:209
-msgid "Battery Charging - press \"2\""
-msgstr "Только заряд батареи - нажмите кнопку \"2\""
+#: src/usbwatcher.c:204
+msgid "Usb Mass Storage - press \"1\""
+msgstr "Заряд батареи и передача данных - нажмите кнопку «1»"

@@ -25,6 +25,7 @@
 #include <string.h>
 #include <libintl.h>
 #include <time.h>
+#include <locale.h>
 
 #include <Ecore.h>
 #include <Ecore_X.h>

@@ -53,12 +53,6 @@ x_shutdown(void *param)
 }
 
 static void
-main_win_close_handler(Ecore_Evas *mw)
-{
-    ecore_evas_hide(mw);
-}
-
-static void
 usb_pluggged()
 {
     ecore_evas_hide(main_win);
@@ -147,18 +141,6 @@ _client_data(void *param, int ev_type, void *ev)
     memcpy(msg->msg + msg->size, e->data, e->size);
     msg->size += e->size;
     return 0;
-}
-
-static void main_win_resize_handler(Ecore_Evas *main_win)
-{
-    ecore_evas_hide(main_win);
-    Evas *canvas = ecore_evas_get(main_win);
-    int w, h;
-    evas_output_size_get(canvas, &w, &h);
-
-    Evas_Object *edje = evas_object_name_find(canvas, "edje");
-    evas_object_resize(edje, w, h);
-    ecore_evas_show(main_win);
 }
 
 int main(int argc, char **argv)

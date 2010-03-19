@@ -26,6 +26,7 @@
 #include <libintl.h>
 #include <time.h>
 #include <locale.h>
+#include <err.h>
 
 #include <Ecore.h>
 #include <Ecore_X.h>
@@ -55,16 +56,6 @@ static void
 main_win_close_handler(Ecore_Evas *mw)
 {
     ecore_evas_hide(mw);
-}
-
-static void
-die(const char *fmt, ...)
-{
-    va_list ap;
-    va_start(ap, fmt);
-    vfprintf(stderr, fmt, ap);
-    va_end(ap);
-    exit(EXIT_FAILURE);
 }
 
 static void
@@ -173,15 +164,15 @@ static void main_win_resize_handler(Ecore_Evas *main_win)
 int main(int argc, char **argv)
 {
     if (!evas_init())
-        die("Unable to initialize Evas\n");
+        errx(1, "Unable to initialize Evas\n");
     if (!ecore_init())
-        die("Unable to initialize Ecore\n");
+        errx(1, "Unable to initialize Ecore\n");
     if (!ecore_con_init())
-        die("Unable to initialize Ecore_Con\n");
+        errx(1, "Unable to initialize Ecore_Con\n");
     if (!ecore_evas_init())
-        die("Unable to initialize Ecore_Evas\n");
+        errx(1, "Unable to initialize Ecore_Evas\n");
     if (!edje_init())
-        die("Unable to initialize Edje\n");
+        errx(1, "Unable to initialize Edje\n");
 
     setlocale(LC_ALL, "");
     textdomain("usbwatcher");

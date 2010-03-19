@@ -38,6 +38,7 @@
 
 #include <libeoi_themes.h>
 #include <libeoi_dialog.h>
+#include <libeoi_utils.h>
 
 #define USB_PLUGGED "USB-plugged"
 #define USB_UNPLUGGGED "USB-unplugged"
@@ -208,10 +209,9 @@ int main(int argc, char **argv)
     evas_object_focus_set(main_edje, 1);
     evas_object_event_callback_add(main_edje, EVAS_CALLBACK_KEY_UP, &key_handler, keys);
 
-    char *t;
-    asprintf(&t, "%s<br><br>%s",
-             gettext("USB Mass Storage - press \"1\""),
-             gettext("Battery Charging - press \"2\""));
+    char *t = xasprintf("%s<br><br>%s",
+        gettext("USB Mass Storage - press \"1\""),
+        gettext("Battery Charging - press \"2\""));
     edje_object_part_text_set(main_edje, "usbwatcher/text", t);
     free(t);
 

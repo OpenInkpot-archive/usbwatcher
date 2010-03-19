@@ -44,187 +44,198 @@
 
 static Ecore_Evas *main_win;
 
-void x_shutdown(void* param) { 
-	ecore_main_loop_quit();
+static void
+x_shutdown(void *param)
+{
+    ecore_main_loop_quit();
 }
 
-void main_win_close_handler(Ecore_Evas *mw)
+static void
+main_win_close_handler(Ecore_Evas *mw)
 {
-	ecore_evas_hide(mw);
+    ecore_evas_hide(mw);
 }
 
-static void die(const char* fmt, ...)
+static void
+die(const char *fmt, ...)
 {
-	va_list ap;
-	va_start(ap, fmt);
-	vfprintf(stderr, fmt, ap);
-	va_end(ap);
-	exit(EXIT_FAILURE);
+    va_list ap;
+    va_start(ap, fmt);
+    vfprintf(stderr, fmt, ap);
+    va_end(ap);
+    exit(EXIT_FAILURE);
 }
 
-void usb_pluggged()
+static void
+usb_pluggged()
 {
-	ecore_evas_hide(main_win);
-	ecore_evas_show(main_win);
+    ecore_evas_hide(main_win);
+    ecore_evas_show(main_win);
 }
 
-void usb_unplugged()
+static void
+usb_unplugged()
 {
-	ecore_evas_hide(main_win);
+    ecore_evas_hide(main_win);
 }
 
-void load_massstorage()
+static void
+load_massstorage()
 {
-	ecore_evas_hide(main_win);
-	system("usb-mass-storage");
+    ecore_evas_hide(main_win);
+    system("usb-mass-storage");
 }
 
-void load_usbnet()
+static void
+load_usbnet()
 {
-	ecore_evas_hide(main_win);
-	system("usb-usbnet");
+    ecore_evas_hide(main_win);
+    system("usb-usbnet");
 }
 
-void do_nothing()
+static void
+do_nothing()
 {
-	ecore_evas_hide(main_win);
+    ecore_evas_hide(main_win);
 }
 
 static void
 key_handler(void *data, Evas *evas, Evas_Object *obj, void *event_info)
 {
-    const char* action = keys_lookup_by_event((keys_t*)data, "default",
+    const char *action = keys_lookup_by_event((keys_t*)data, "default",
                                               (Evas_Event_Key_Up*)event_info);
 
-    if(action && !strcmp(action, "Close"))
+    if (action && !strcmp(action, "Close"))
         do_nothing();
-    else if(action && !strcmp(action, "MassStorage"))
+    else if (action && !strcmp(action, "MassStorage"))
         load_massstorage();
-    else if(action && !strcmp(action, "Usbnet"))
+    else if (action && !strcmp(action, "Usbnet"))
         load_usbnet();
 }
 
-typedef struct
-{
-	char* msg;
+typedef struct {
+	char *msg;
 	int size;
 } client_data_t;
 
-static int _client_add(void* param, int ev_type, void* ev)
+static int
+_client_add(void *param, int ev_type, void *ev)
 {
-	Ecore_Con_Event_Client_Add* e = ev;
-	client_data_t* msg = malloc(sizeof(client_data_t));
-	msg->msg = strdup("");
-	msg->size = 0;
-	ecore_con_client_data_set(e->client, msg);
-	return 0;
+    Ecore_Con_Event_Client_Add* e = ev;
+    client_data_t* msg = malloc(sizeof(client_data_t));
+    msg->msg = strdup("");
+    msg->size = 0;
+    ecore_con_client_data_set(e->client, msg);
+    return 0;
 }
 
-static int _client_del(void* param, int ev_type, void* ev)
+static int
+_client_del(void *param, int ev_type, void *ev)
 {
-	Ecore_Con_Event_Client_Del* e = ev;
-	client_data_t* msg = ecore_con_client_data_get(e->client);
+    Ecore_Con_Event_Client_Del *e = ev;
+    client_data_t *msg = ecore_con_client_data_get(e->client);
 
-	/* Handle */
-	if(strlen(USB_PLUGGED) == msg->size && !strncmp(USB_PLUGGED, msg->msg, msg->size))
-		usb_pluggged();
-	else if(strlen(USB_UNPLUGGGED) == msg->size && !strncmp(USB_UNPLUGGGED, msg->msg, msg->size))
-		usb_unplugged();
+    /* Handle */
+    if (strlen(USB_PLUGGED) == msg->size && !strncmp(USB_PLUGGED, msg->msg, msg->size))
+        usb_pluggged();
+    else if (strlen(USB_UNPLUGGGED) == msg->size && !strncmp(USB_UNPLUGGGED, msg->msg, msg->size))
+        usb_unplugged();
 
-	free(msg->msg);
-	free(msg);
-	return 0;
+    free(msg->msg);
+    free(msg);
+    return 0;
 }
 
-static int _client_data(void* param, int ev_type, void* ev)
+static int
+_client_data(void *param, int ev_type, void *ev)
 {
-	Ecore_Con_Event_Client_Data* e = ev;
-	client_data_t* msg = ecore_con_client_data_get(e->client);
-	msg->msg = realloc(msg->msg, msg->size + e->size);
-	memcpy(msg->msg + msg->size, e->data, e->size);
-	msg->size += e->size;
-	return 0;
+    Ecore_Con_Event_Client_Data *e = ev;
+    client_data_t *msg = ecore_con_client_data_get(e->client);
+    msg->msg = realloc(msg->msg, msg->size + e->size);
+    memcpy(msg->msg + msg->size, e->data, e->size);
+    msg->size += e->size;
+    return 0;
 }
 
-static void main_win_resize_handler(Ecore_Evas* main_win)
+static void main_win_resize_handler(Ecore_Evas *main_win)
 {
-	ecore_evas_hide(main_win);
-	Evas* canvas = ecore_evas_get(main_win);
-	int w, h;
-	evas_output_size_get(canvas, &w, &h);
+    ecore_evas_hide(main_win);
+    Evas *canvas = ecore_evas_get(main_win);
+    int w, h;
+    evas_output_size_get(canvas, &w, &h);
 
-	Evas_Object* edje = evas_object_name_find(canvas, "edje");
-	evas_object_resize(edje, w, h);
-	ecore_evas_show(main_win);
+    Evas_Object *edje = evas_object_name_find(canvas, "edje");
+    evas_object_resize(edje, w, h);
+    ecore_evas_show(main_win);
 }
 
 int main(int argc, char **argv)
 {
-	if(!evas_init())
-		die("Unable to initialize Evas\n");
-	if(!ecore_init())
-		die("Unable to initialize Ecore\n");
-	if(!ecore_con_init())
-		die("Unable to initialize Ecore_Con\n");
-	if(!ecore_evas_init())
-		die("Unable to initialize Ecore_Evas\n");
-	if(!edje_init())
-		die("Unable to initialize Edje\n");
+    if (!evas_init())
+        die("Unable to initialize Evas\n");
+    if (!ecore_init())
+        die("Unable to initialize Ecore\n");
+    if (!ecore_con_init())
+        die("Unable to initialize Ecore_Con\n");
+    if (!ecore_evas_init())
+        die("Unable to initialize Ecore_Evas\n");
+    if (!edje_init())
+        die("Unable to initialize Edje\n");
 
-	setlocale(LC_ALL, "");
-	textdomain("usbwatcher");
+    setlocale(LC_ALL, "");
+    textdomain("usbwatcher");
 
-    keys_t* keys = keys_alloc("usbwatcher");
+    keys_t *keys = keys_alloc("usbwatcher");
 
-	ecore_x_io_error_handler_set(x_shutdown, NULL);
+    ecore_x_io_error_handler_set(x_shutdown, NULL);
 
-	ecore_con_server_add(ECORE_CON_LOCAL_USER, "usbwatcher", 0, NULL);
+    ecore_con_server_add(ECORE_CON_LOCAL_USER, "usbwatcher", 0, NULL);
 
-	ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_ADD, _client_add, NULL);
-	ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_DATA, _client_data, NULL);
-	ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_DEL, _client_del, NULL);
+    ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_ADD, _client_add, NULL);
+    ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_DATA, _client_data, NULL);
+    ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_DEL, _client_del, NULL);
 
-	main_win = ecore_evas_software_x11_new(0, 0, 0, 0, 600, 800);
-	ecore_evas_borderless_set(main_win, 0);
-	ecore_evas_shaped_set(main_win, 0);
-	ecore_evas_title_set(main_win, "Usbwatcher");
-	Evas *main_canvas = ecore_evas_get(main_win);
+    main_win = ecore_evas_software_x11_new(0, 0, 0, 0, 600, 800);
+    ecore_evas_borderless_set(main_win, 0);
+    ecore_evas_shaped_set(main_win, 0);
+    ecore_evas_title_set(main_win, "Usbwatcher");
+    Evas *main_canvas = ecore_evas_get(main_win);
 
     Evas_Object *main_edje
         = eoi_create_themed_edje(main_canvas, "usbwatcher", "usbwatcher");
-;
-	evas_object_name_set(main_edje, "edje");
-	evas_object_focus_set(main_edje, 1);
-	evas_object_event_callback_add(main_edje, EVAS_CALLBACK_KEY_UP, &key_handler, keys);
 
-	char *t;
-	asprintf(&t, "%s<br><br>%s",
-			gettext("USB Mass Storage - press \"1\""),
-			gettext("Battery Charging - press \"2\""));
-	edje_object_part_text_set(main_edje, "usbwatcher/text", t);
-	free(t);
+    evas_object_name_set(main_edje, "edje");
+    evas_object_focus_set(main_edje, 1);
+    evas_object_event_callback_add(main_edje, EVAS_CALLBACK_KEY_UP, &key_handler, keys);
 
-        Evas_Object *dlg = eoi_dialog_create("usbwatcher-dlg", main_edje);
-        ecore_evas_object_associate(main_win, dlg, 0);
-        eoi_dialog_title_set(dlg, gettext("USB Connection"));
+    char *t;
+    asprintf(&t, "%s<br><br>%s",
+             gettext("USB Mass Storage - press \"1\""),
+             gettext("Battery Charging - press \"2\""));
+    edje_object_part_text_set(main_edje, "usbwatcher/text", t);
+    free(t);
 
-        Evas_Object *icon = eoi_create_themed_edje(main_canvas, "usbwatcher", "icon");
-        edje_object_part_swallow(dlg, "icon", icon);
+    Evas_Object *dlg = eoi_dialog_create("usbwatcher-dlg", main_edje);
+    ecore_evas_object_associate(main_win, dlg, 0);
+    eoi_dialog_title_set(dlg, gettext("USB Connection"));
 
-        evas_object_resize(dlg, 600, 800);
+    Evas_Object *icon = eoi_create_themed_edje(main_canvas, "usbwatcher", "icon");
+    edje_object_part_swallow(dlg, "icon", icon);
 
-        evas_object_show(dlg);
+    evas_object_resize(dlg, 600, 800);
 
-	ecore_main_loop_begin();
+    evas_object_show(dlg);
 
-	ecore_evas_free(main_win);
-	edje_shutdown();
-	ecore_evas_shutdown();
-	ecore_con_shutdown();
-	ecore_shutdown();
-	evas_shutdown();
+    ecore_main_loop_begin();
+
+    ecore_evas_free(main_win);
+    edje_shutdown();
+    ecore_evas_shutdown();
+    ecore_con_shutdown();
+    ecore_shutdown();
+    evas_shutdown();
 
     keys_free(keys);
 
-	return 0;
+    return 0;
 }

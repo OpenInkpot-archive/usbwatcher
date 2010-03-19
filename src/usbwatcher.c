@@ -36,6 +36,7 @@
 #include <libkeys.h>
 
 #include <libeoi_themes.h>
+#include <libeoi_dialog.h>
 
 #ifndef DATADIR
 #define DATADIR "."
@@ -196,16 +197,9 @@ int main(int argc, char **argv)
         = eoi_create_themed_edje(main_canvas, "usbwatcher", "usbwatcher");
 ;
 	evas_object_name_set(main_edje, "edje");
-	evas_object_move(main_edje, 0, 0);
-	evas_object_resize(main_edje, 600, 800);
-	evas_object_show(main_edje);
-
 	evas_object_focus_set(main_edje, 1);
 	evas_object_event_callback_add(main_edje, EVAS_CALLBACK_KEY_UP, &key_handler, keys);
 
-	ecore_evas_callback_resize_set(main_win, main_win_resize_handler);
-
-	edje_object_part_text_set(main_edje, "usbwatcher/title", gettext("USB Connection"));
 	char *t;
 	asprintf(&t, "%s<br><br>%s",
 			gettext("USB Mass Storage - press \"1\""),
@@ -213,10 +207,20 @@ int main(int argc, char **argv)
 	edje_object_part_text_set(main_edje, "usbwatcher/text", t);
 	free(t);
 
+        Evas_Object *dlg = eoi_dialog_create("usbwatcher-dlg", main_edje);
+        ecore_evas_object_associate(main_win, dlg, 0);
+        eoi_dialog_title_set(dlg, gettext("USB Connection"));
+
+        Evas_Object *icon = eoi_create_themed_edje(main_canvas, "usbwatcher", "icon");
+        edje_object_part_swallow(dlg, "icon", icon);
+
+        evas_object_resize(dlg, 600, 800);
+
+        evas_object_show(dlg);
+
 	ecore_main_loop_begin();
 
 	ecore_evas_free(main_win);
-
 	edje_shutdown();
 	ecore_evas_shutdown();
 	ecore_con_shutdown();

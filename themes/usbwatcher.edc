@@ -1,91 +1,44 @@
-images {
-	image, "usb.png" COMP;
-}
-
 styles {
-	style {
-		name, "textblock_style";
-		base, "font=sans-serif font_size=24 align=left valign=middle color=#000 wrap=word";
-		tag, "br" "   \n";
-	}
+    style {
+        name, "text";
+        base, "font=DejaVu\\Sans\\ Condensed font_size=22 align=center color=#000 wrap=word";
+        tag, "bb" "+font=DejaVu\\ Sans\\ Condensed:style=bold";
+        tag, "/bb" "-";
+        tag, "br" "\n";
+    }
 }
 
 collections {
-	group { 
-		name, "usbwatcher"; 
-		parts { 
-			part { 
-				name, "usbwatcher/bg"; 
-				type, RECT; 
-				description { 
-					state, "default" 0.0; 
-					color, 255 255 255 255; 
-					rel1 { relative, 0.0 0.0; offset, 0 0; }
-					rel2 { relative, 1.0 1.0; offset, -1 -1; }
-				}
-			}
-			part {
-				name, "usbwatcher/image";
-				type, IMAGE;
-				mouse_events, 0;
-				description {
-					state, "default" 0.0;
-					min, 600 377;
-					max, 600 377;
-					rel1 { relative, 0.0 1.0; offset, 0 -377; to, "usbwatcher/bg"; }
-					rel2 { relative, 1.0 1.0; offset, -1 -1; to, "usbwatcher/bg"; }
-					image {
-						normal, "usb.png";
-					}
-				}
-			}
-			part {
-				name, "usbwatcher/title";
-				type, TEXT;
-				mouse_events, 0;
-				description {
-					state, "default" 0.0;
-					color, 0 0 0 255;
-					text {
-						font, "sans-serif";
-						size, 24;
-						text, "USB Connection";
-					}
-					rel1 { relative, 0.0 0.0; offset, 11 42; to, "usbwatcher/image"; }
-					rel2 { relative, 0.0 0.0; offset, 590 63; to, "usbwatcher/image"; }
-					align, 0.0 0.0;
-				}
-			}
-			part {
-				name, "usbwatcher/text_rect";
-				type, RECT;
-				mouse_events, 0;
-				description {
-					state, "default" 0.0;
-					color, 255 255 255 0;
-					rel1 { relative, 0.0 0.0; offset, 200 130; to, "usbwatcher/image"; }
-					rel2 { relative, 0.0 0.0; offset, 580 320; to, "usbwatcher/image"; }
-				}
-			}
-			part {
-				name, "usbwatcher/text";
-				type, TEXTBLOCK;
-				multiline, 1;
-				mouse_events, 0;
-				description {
-					state, "default" 0.0;
-					color, 0 0 0 255;
-					text {
-						style, "textblock_style";
-						max, 0 1;
-					}
-					align, 0.0 0.3;
-					rel1 { relative, 0.0 0.0; offset, 0 0; to, "usbwatcher/text_rect"; }
-					rel2 { relative, 1.0 1.0; offset, -1 -1; to, "usbwatcher/text_rect"; }
-				}
-			}
-		}
+    group {
+        name, "usbwatcher";
+        parts {
+            part {
+                name, "usbwatcher/text";
+                type, TEXTBLOCK;
+                multiline, 1;
+                description {
+                    state, "default" 0.0;
+                    text { style, "text"; }
+                    rel1 { offset, 0 25; }
+                }
+            }
 	}
+    }
+    group {
+        name, "icon";
+        images {
+            image, "usb-icon.png" COMP;
+        }
+        parts {
+            part {
+                name, "icon";
+                description {
+                    state, "default" 0.0;
+                    image {
+                        normal, "usb-icon.png";
+                    }
+                }
+            }
+        }
+    }
 }
-
-

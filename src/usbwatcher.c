@@ -229,8 +229,8 @@ int main(int argc, char **argv)
     ecore_main_loop_begin();
 
     ecore_evas_free(main_win);
-    edje_shutdown();
     ecore_evas_shutdown();
+    edje_shutdown();
     ecore_con_shutdown();
     ecore_shutdown();
     evas_shutdown();

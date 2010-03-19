@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
- * Copyright © 2009 Mikhail Gusarov <dottedmag@dottedmag.net>
+ * Copyright © 2009,2010 Mikhail Gusarov <dottedmag@dottedmag.net>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,10 +38,6 @@
 
 #include <libeoi_themes.h>
 #include <libeoi_dialog.h>
-
-#ifndef DATADIR
-#define DATADIR "."
-#endif
 
 #define USB_PLUGGED "USB-plugged"
 #define USB_UNPLUGGGED "USB-unplugged"

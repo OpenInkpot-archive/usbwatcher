@@ -1,3 +1,9 @@
+usbwatcher (0.3.13) zelazny; urgency=low
+
+  * Translations updated: Russian.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Mon, 22 Mar 2010 07:56:24 +0600
+
 usbwatcher (0.3.12) zelazny; urgency=low
 
   * Code cleanup

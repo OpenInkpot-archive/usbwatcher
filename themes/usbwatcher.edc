@@ -34,9 +34,7 @@ collections {
                 name, "icon";
                 description {
                     state, "default" 0.0;
-                    image {
-                        normal, "usb-icon.png";
-                    }
+                    image { normal, "usb-icon.png"; }
                 }
             }
         }

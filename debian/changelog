@@ -1,9 +1,15 @@
-usbwatcher (0.3.11) zelazny; urgency=low
+usbwatcher (0.3.12) zelazny; urgency=low
 
   * Code cleanup
   * Use dialog from libeoi.
 
  -- Mikhail Gusarov <dottedmag@dottedmag.net>  Mon, 22 Mar 2010 06:20:05 +0600
+
+usbwatcher (0.3.11) zelazny; urgency=low
+
+  * Get rid of rotated images
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sun, 14 Mar 2010 20:07:36 +0100
 
 usbwatcher (0.3.10) zelazny; urgency=low
 

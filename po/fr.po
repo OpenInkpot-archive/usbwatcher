@@ -22,13 +22,13 @@ msgstr ""
 msgid "USB Connection"
 msgstr "Connexion USB"
 
-#: src/usbwatcher.c:209
-msgid "Battery Charging - press \"2\""
-msgstr "Charge de la batterie - appuyez sur « 2 »"
-
 #: src/usbwatcher.c:208
 msgid "USB Mass Storage - press \"1\""
-msgstr "Stockage USB - appuyez sur \"1\""
+msgstr "Transférer de fichiers via USB - appuyez sur « 1 »"
+
+#: src/usbwatcher.c:209
+msgid "Battery Charging - press \"2\""
+msgstr "Charger la batterie - appuyez sur « 2 »"
 
 #~ msgid "Charging"
 #~ msgstr "En charge"

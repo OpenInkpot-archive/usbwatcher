@@ -19,10 +19,10 @@ msgstr ""
 msgid "USB Connection"
 msgstr "USB-соединение"
 
-#: src/usbwatcher.c:208
-msgid "USB Mass Storage - press \"1\""
-msgstr "Передача данных - нажмите кнопку \"1\""
-
 #: src/usbwatcher.c:209
 msgid "Battery Charging - press \"2\""
-msgstr "Зарядка - нажмите кнопку \"2\""
+msgstr "Зарядка - нажмите \"2\""
+
+#: src/usbwatcher.c:208
+msgid "USB Mass Storage - press \"1\""
+msgstr "Передача данных - нажмите \"1\""

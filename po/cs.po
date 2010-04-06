@@ -20,7 +20,6 @@ msgid "USB Connection"
 msgstr "USB připojení"
 
 #: src/usbwatcher.c:208
-#, fuzzy
 msgid "USB Mass Storage - press \"1\""
 msgstr "Velkokapacitní zařízení USB - stiskni \"1\""
 

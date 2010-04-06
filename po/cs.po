@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: usbwatcher\n"
 "Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
 "POT-Creation-Date: 2009-12-27 18:20+0600\n"
-"PO-Revision-Date: 2009-08-19 11:37+0100\n"
+"PO-Revision-Date: 2010-04-06 20:18+0100\n"
 "Last-Translator: ben1981 <ben1981@centrum.cz>\n"
 "Language-Team: Czech <openinkpot-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr "USB připojení"
 #: src/usbwatcher.c:208
 #, fuzzy
 msgid "USB Mass Storage - press \"1\""
-msgstr "USB Mass Storage - stiskni \"1\""
+msgstr "Velkokapacitní zařízení USB - stiskni \"1\""
 
 #: src/usbwatcher.c:209
 msgid "Battery Charging - press \"2\""

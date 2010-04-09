@@ -1,6 +1,12 @@
+usbwatcher (0.3.15) zelazny; urgency=low
+
+  * Translations updated: Czech, Hungarian, Polish, Russian.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Fri, 09 Apr 2010 21:07:37 +0700
+
 usbwatcher (0.3.14) zelazny; urgency=low
 
-  * Translations updated: Bulgarian, French, Russian, Ukrainian, Chinese
+  * Translations updated: Bulgarian, French, Russian, Ukrainian, Chinese.
 
  -- Mikhail Gusarov <dottedmag@dottedmag.net>  Wed, 31 Mar 2010 03:22:44 +0700
 

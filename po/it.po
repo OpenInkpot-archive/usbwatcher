@@ -3,7 +3,7 @@
 # Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
 # This file is distributed under the same license as the PACKAGE package.
 # Alexander Kerner <lunohod@openinkpot.org>
-#
+# 
 # Mascal <mascal@mascal.it>, 2009.
 msgid ""
 msgstr ""
@@ -21,14 +21,13 @@ msgstr ""
 msgid "USB Connection"
 msgstr "Cnnessione USB"
 
-#: src/usbwatcher.c:208
-#, fuzzy
-msgid "USB Mass Storage - press \"1\""
-msgstr "Memoria di massa USB - premi \"1\""
-
 #: src/usbwatcher.c:209
 msgid "Battery Charging - press \"2\""
 msgstr "Carica batteria - premi \"2\""
+
+#: src/usbwatcher.c:208
+msgid "USB Mass Storage - press \"1\""
+msgstr "Memoria di massa USB - premi \"1\""
 
 #~ msgid "Charging"
 #~ msgstr "In carica"

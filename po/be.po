@@ -18,11 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 0.3\n"
 
-#: src/usbwatcher.c:205
-#, fuzzy
-msgid "USB Connection"
-msgstr "Знойдзена USB-злучэнне. Выберыце рэжым."
-
 #: src/usbwatcher.c:209
 msgid "Battery Charging - press \"2\""
 msgstr "Зарадка - націсніце \"2\""
@@ -30,6 +25,10 @@ msgstr "Зарадка - націсніце \"2\""
 #: src/usbwatcher.c:208
 msgid "USB Mass Storage - press \"1\""
 msgstr "Перадача дадзеных - націсніце \"1\""
+
+#: src/usbwatcher.c:205
+msgid "USB Connection"
+msgstr "USB-злучэнне."
 
 #~ msgid "Charging"
 #~ msgstr "Зарадка"

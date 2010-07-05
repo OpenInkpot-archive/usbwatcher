@@ -1,8 +1,28 @@
 usbwatcher (0.3.16) zelazny; urgency=low
 
+  [ Alexander Kerner ]
   * Adjustment to ecore API changes
 
- -- Alexander Kerner <lunohod@openinkpot.org>  Mon, 05 Jul 2010 08:10:19 +0200
+  [ Tomasz Długosz ]
+  * l10n: initial swedish translation
+
+  [ Sven Bring ]
+  * l10n: Updates to Swedish (sv) translation
+
+  [ Shuntya ]
+  * l10n: Updates to Spanish (Castilian) (es) translation
+
+  [ mascal ]
+  * l10n: Updates to Italian (it) translation
+
+  [ Pclent ]
+  * l10n: Updates to French (fr) translation
+
+  [ jekhor ]
+  * l10n: Updates to Belarusian (be) translation
+  * l10n: Updates to Belarusian (be) translation
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Mon, 05 Jul 2010 08:11:23 +0200
 
 usbwatcher (0.3.15) zelazny; urgency=low
 

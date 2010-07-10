@@ -1,3 +1,10 @@
+usbwatcher (0.3.16.bradbury1) bradbury; urgency=low
+
+  * Build for bradbury
+  * Backported: Switch ecore-con server from LOCAL_USER to LOCAL_SYSTEM
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sat, 10 Jul 2010 20:16:09 +0200
+
 usbwatcher (0.3.15) zelazny; urgency=low
 
   * Translations updated: Czech, Hungarian, Polish, Russian.

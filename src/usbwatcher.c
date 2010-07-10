@@ -163,7 +163,7 @@ int main(int argc, char **argv)
 
     ecore_x_io_error_handler_set(x_shutdown, NULL);
 
-    ecore_con_server_add(ECORE_CON_LOCAL_USER, "usbwatcher", 0, NULL);
+    ecore_con_server_add(ECORE_CON_LOCAL_SYSTEM, "usbwatcher", 0, NULL);
 
     ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_ADD, _client_add, NULL);
     ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_DATA, _client_data, NULL);

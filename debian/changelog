@@ -1,3 +1,9 @@
+usbwatcher (0.3.17) zelazny; urgency=low
+
+  * Switch ecore-con server from LOCAL_USER to LOCAL_SYSTEM
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sat, 10 Jul 2010 20:14:23 +0200
+
 usbwatcher (0.3.16) zelazny; urgency=low
 
   [ Alexander Kerner ]

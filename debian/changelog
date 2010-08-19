@@ -1,3 +1,9 @@
+usbwatcher (0.3.18) zelazny; urgency=low
+
+  * Use 8bpp engine
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Thu, 19 Aug 2010 09:44:59 +0200
+
 usbwatcher (0.3.17) zelazny; urgency=low
 
   * Switch ecore-con server from LOCAL_USER to LOCAL_SYSTEM

@@ -169,7 +169,7 @@ int main(int argc, char **argv)
     ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_DATA, _client_data, NULL);
     ecore_event_handler_add(ECORE_CON_EVENT_CLIENT_DEL, _client_del, NULL);
 
-    main_win = ecore_evas_software_x11_new(0, 0, 0, 0, 600, 800);
+    main_win = ecore_evas_software_x11_8_new(0, 0, 0, 0, 600, 800);
     ecore_evas_borderless_set(main_win, 0);
     ecore_evas_shaped_set(main_win, 0);
     ecore_evas_title_set(main_win, "Usbwatcher");

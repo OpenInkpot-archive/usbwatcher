@@ -3,7 +3,7 @@ top_builddir = ..
 # -- Build
 
 POFILES = $(wildcard *.po)
-MOFILES = $(patsubst %.po,%.mo,$(POFILES)) 
+MOFILES = $(patsubst %.po,$(abs_builddir)/%.mo,$(POFILES)) 
 
 CLEANFILES = $(MOFILES)
 
@@ -36,7 +36,7 @@ $(PACKAGE).pot:
 		--foreign-user \
 		--package-name="$(PACKAGE)" --package-version="$(VERSION)" \
 		--msgid-bugs-address="$(PACKAGE_BUGREPORT)" \
-		-o $(srcdir)/$@ $(SOURCES)
+		-o $(abs_srcdir)/$@ $(SOURCES)
 
 # .tx
 

@@ -1,0 +1,8 @@
+[oi.usbwatcher]
+file_filter = po/<lang>.po
+source_file = po/usbwatcher.pot
+source_lang = en
+
+[main]
+host = transifex.net
+

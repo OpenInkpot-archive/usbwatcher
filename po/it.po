@@ -1,33 +1,29 @@
-# translation of usbwatcher.po to italian
-# usbwatcher
-# Copyright (C) 2009 Alexander Kerner <lunohod@openinkpot.org>
-# This file is distributed under the same license as the PACKAGE package.
-# Alexander Kerner <lunohod@openinkpot.org>
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Mascal <mascal@mascal.it>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: usbwatcher\n"
-"Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
+"Project-Id-Version: OpenInkpot\n"
+"Report-Msgid-Bugs-To: http://openinkpot.org/report/\n"
 "POT-Creation-Date: 2009-12-27 18:20+0600\n"
-"PO-Revision-Date: 2009-08-21 14:02+0200\n"
-"Last-Translator: Mascal <mascal@mascal.it>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2011-02-02 03:07+0000\n"
+"Last-Translator: dottedmag <dottedmag@dottedmag.net>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/usbwatcher.c:205
 msgid "USB Connection"
 msgstr "Cnnessione USB"
 
-#: src/usbwatcher.c:209
-msgid "Battery Charging - press \"2\""
-msgstr "Carica batteria - premi \"2\""
-
 #: src/usbwatcher.c:208
 msgid "USB Mass Storage - press \"1\""
 msgstr "Memoria di massa USB - premi \"1\""
 
-#~ msgid "Charging"
-#~ msgstr "In carica"
+#: src/usbwatcher.c:209
+msgid "Battery Charging - press \"2\""
+msgstr "Carica batteria - premi \"2\""

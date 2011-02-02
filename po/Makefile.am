@@ -3,7 +3,7 @@ top_builddir = ..
 # -- Build
 
 POFILES = $(wildcard *.po)
-MOFILES = $(patsubst %.po,$(abs_builddir)/%.mo,$(POFILES)) 
+MOFILES = $(patsubst %.po,%.mo,$(POFILES))
 
 CLEANFILES = $(MOFILES)
 

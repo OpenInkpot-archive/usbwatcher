@@ -1,3 +1,15 @@
+usbwatcher (0.3.19) zelazny; urgency=low
+
+  [ Mikhail Gusarov ]
+  * Move .po handling to Tx.net
+  * Fix location of generated files
+  * Fix .mo files generation
+
+  [ Alexander Kerner ]
+  * Change mdev script to get power supply type from sysfs
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Thu, 14 Apr 2011 23:10:53 +0200
+
 usbwatcher (0.3.18) zelazny; urgency=low
 
   * Use 8bpp engine

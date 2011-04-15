@@ -1,6 +1,6 @@
 #!/bin/sh
 
-type=`cat /sys$DEVPATH`
+type=`cat /sys$DEVPATH/type`
 if [ x"$ACTION" = x"change" -a x"$type" = x"USB" ]
 then
 	if [ $POWER_SUPPLY_ONLINE -eq 1 ]

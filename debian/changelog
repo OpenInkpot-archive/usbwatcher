@@ -1,3 +1,9 @@
+usbwatcher (0.3.20) zelazny; urgency=low
+
+  * Fix the name of file with power supply type property
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sat, 16 Apr 2011 09:09:36 +0200
+
 usbwatcher (0.3.19) zelazny; urgency=low
 
   [ Mikhail Gusarov ]

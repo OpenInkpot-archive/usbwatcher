@@ -1,3 +1,9 @@
+usbwatcher (0.3.21) zelazny; urgency=low
+
+  * Add serial number option for g_file_storage to make wendowz happy
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sun, 17 Apr 2011 21:55:06 +0200
+
 usbwatcher (0.3.20) zelazny; urgency=low
 
   * Fix the name of file with power supply type property

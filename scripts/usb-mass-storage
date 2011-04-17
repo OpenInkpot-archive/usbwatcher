@@ -22,6 +22,6 @@ umount /media/sd
 umount /mnt/storage
 
 rmmod g_ether
-modprobe g_file_storage file=${FILE} stall=0 removable=1
+modprobe g_file_storage file=${FILE} stall=0 removable=1 serial=000000000516
 
 echo STATE=mass_storage > /var/lib/usbwatcher/state

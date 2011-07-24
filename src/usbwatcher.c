@@ -189,7 +189,6 @@ int main(int argc, char **argv)
     free(t);
 
     Evas_Object *dlg = eoi_dialog_create("usbwatcher-dlg", main_edje);
-    ecore_evas_object_associate(main_win, dlg, 0);
     eoi_dialog_title_set(dlg, gettext("USB Connection"));
 
     Evas_Object *icon = eoi_create_themed_edje(main_canvas, "usbwatcher", "icon");
@@ -198,6 +197,8 @@ int main(int argc, char **argv)
     evas_object_resize(dlg, 600, 800);
 
     evas_object_show(dlg);
+
+    ecore_evas_object_associate(main_win, dlg, 0);
 
     ecore_main_loop_begin();
 

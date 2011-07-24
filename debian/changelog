@@ -1,3 +1,9 @@
+usbwatcher (0.3.22) zelazny; urgency=low
+
+  * Fix issue with main window hiding
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sun, 24 Jul 2011 17:40:50 +0200
+
 usbwatcher (0.3.21) zelazny; urgency=low
 
   * Add serial number option for g_file_storage to make wendowz happy
